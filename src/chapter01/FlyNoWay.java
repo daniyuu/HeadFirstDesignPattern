@@ -1,5 +1,6 @@
 package chapter01;
 
+
 public class FlyNoWay implements FlyBehavior {
 
 	@Override

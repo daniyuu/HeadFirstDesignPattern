@@ -1,5 +1,6 @@
 package chapter01;
 
+
 public class FlyWithWings implements FlyBehavior {
 
 	public void fly() {
