@@ -3,18 +3,22 @@
  */
 package observer;
 
+import java.util.Observable;
+import java.util.Observer;
+
 /**
  * @author Daniyuu
  *
  */
 public class CurrentConditionsDisplay implements Observer, DisplayElement {
+	Observable observable;
 	private float temperature;
 	private float humidity;
-	private Subject weatherData;
+
 	
-	public CurrentConditionsDisplay(Subject weatherData){
-		this.weatherData = weatherData;
-		weatherData.registerObserver(this);
+	public CurrentConditionsDisplay(Observable observable){
+		this.observable = observable;
+		observable.addObserver(this);
 	}
 	
 	
@@ -26,13 +30,16 @@ public class CurrentConditionsDisplay implements Observer, DisplayElement {
 		System.out.println("current conditions: " + temperature + "F degrees and " + humidity+ "% humidity");
 	}
 
-	/* (non-Javadoc)
-	 * @see observer.Observer#update(float, float, float)
-	 */
-	@Override
-	public void update(float temp, float humidity, float pressure) {
-		// TODO Auto-generated method stub
 
+
+	@Override
+	public void update(Observable obs, Object arg) {
+		if(obs instanceof WeatherData){
+			WeatherData weatherData = (WeatherData) obs;
+			this.temperature = weatherData.getTemperature();
+			this.humidity = weatherData.getHumiity();
+			display();
+		}
 	}
 
 }
