@@ -17,4 +17,10 @@ public class PepperoniPizza extends Pizza {
 		// TODO Auto-generated constructor stub
 	}
 
+	@Override
+	void prepare() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

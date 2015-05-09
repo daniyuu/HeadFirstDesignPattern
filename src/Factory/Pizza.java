@@ -12,7 +12,7 @@ import java.util.ArrayList;
  */
 public abstract class Pizza {
 	String name;
-	String dough;
+	Dough dough;
 	String sauce;
 	ArrayList toppings = new ArrayList();
 	
@@ -20,9 +20,7 @@ public abstract class Pizza {
 		
 	}
 	
-	public void prepare(){
-		System.out.println("prepare");
-	}
+	abstract void prepare();
 	
 	public void bake(){
 		System.out.println("bake");

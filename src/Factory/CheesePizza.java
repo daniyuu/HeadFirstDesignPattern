@@ -9,12 +9,19 @@ package Factory;
  * @version 
  */
 public class CheesePizza extends Pizza {
+	PizzaIngredientFactory ingredientFactory;
 
 	/**
 	 * 
 	 */
-	public CheesePizza() {
-		// TODO Auto-generated constructor stub
+	public CheesePizza(PizzaIngredientFactory ingredientFactory) {
+		this.ingredientFactory = ingredientFactory;
+	}
+
+	@Override
+	void prepare() {
+		dough = ingredientFactory.createDough();
+		
 	}
 
 }

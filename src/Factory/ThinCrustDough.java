@@ -8,19 +8,13 @@ package Factory;
  * @see 
  * @version 
  */
-public class VeggiePizza extends Pizza {
+public class ThinCrustDough extends Dough {
 
 	/**
 	 * 
 	 */
-	public VeggiePizza() {
+	public ThinCrustDough() {
 		// TODO Auto-generated constructor stub
-	}
-
-	@Override
-	void prepare() {
-		// TODO Auto-generated method stub
-		
 	}
 
 }

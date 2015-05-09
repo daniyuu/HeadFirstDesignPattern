@@ -10,15 +10,14 @@ package Factory;
  */
 public class NYStyleCheesePizza extends CheesePizza {
 
+	public NYStyleCheesePizza(PizzaIngredientFactory ingredientFactory) {
+		super(ingredientFactory);
+		// TODO Auto-generated constructor stub
+	}
+
 	/**
 	 * 
 	 */
-	public NYStyleCheesePizza() {
-		name = "NY Style Sauce and Cheese Pizza";
-		dough = "Thin Crust Dough";
-		sauce = "Marinara Sauce";
-		
-		toppings.add("Gratede Reggiano Cheese");
-	}
+	
 
 }

@@ -10,16 +10,14 @@ package Factory;
  */
 public class ChicagoStyleCheesePizza extends CheesePizza {
 
+	public ChicagoStyleCheesePizza(PizzaIngredientFactory ingredientFactory) {
+		super(ingredientFactory);
+		// TODO Auto-generated constructor stub
+	}
+
 	/**
 	 * 
 	 */
-	public ChicagoStyleCheesePizza() {
-		name = "Chicago Style Deep Dish Cheese Pizza";
-		dough = "Extra Thick Crust Dough";
-		sauce = "Plum Tomato Sauce";
-		
-		toppings.add("Shredded Mozzarella Cheese");
-	}
 	
 	public void cut(){
 		System.out.println("Cutting the Pizza into square slices");
