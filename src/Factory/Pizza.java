@@ -3,12 +3,19 @@
  */
 package Factory;
 
+import java.util.ArrayList;
+
 /**
  * @author daniyuu
  * @see 
  * @version 
  */
-public class Pizza {
+public abstract class Pizza {
+	String name;
+	String dough;
+	String sauce;
+	ArrayList toppings = new ArrayList();
+	
 	public Pizza(){
 		
 	}
@@ -27,5 +34,9 @@ public class Pizza {
 	
 	public void box(){
 		System.out.println("box");
+	}
+	
+	public String getName(){
+		return name;
 	}
 }
