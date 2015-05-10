@@ -11,7 +11,10 @@ package instance;
 public class Singleton {
 //	private static Singleton uniqueInstance;
 	// 在静态初始化器中创建单例，这段代码保证了线程安全
-	private static Singleton uniqueInstance = new Singleton();
+//	private static Singleton uniqueInstance = new Singleton();
+	// 使用双重检查锁，在getInstance中减少使用同步
+	// volatile关键词确保，当uniqueInstance变量被初始化成Singleton实例时，多个线程正确地处理uniqueInstance
+	private volatile static Singleton uniqueInstance;
 	/**
 	 * 构造器声明为私有的，只有singleton类内部才可以调用构造器
 	 */
