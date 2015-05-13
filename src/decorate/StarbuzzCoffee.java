@@ -3,6 +3,11 @@
  */
 package decorate;
 
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
 
 /**
  * @author Daniyuu
@@ -39,6 +44,20 @@ public class StarbuzzCoffee {
 		beverage3 = new Whip(beverage3);
 		
 		System.out.println(beverage3.getDescription() + " $" + beverage3.cost());
+		
+		
+		//test input 
+//		int c;
+//		try{
+//			InputStream in = new LowerCaseInputStream(new BufferedInputStream(new FileInputStream("test.txt")));
+//		
+//		
+//			while((c = in.read()) >= 0){
+//				System.out.println((char)c);
+//			}
+//		}catch(IOException e){
+//			e.printStackTrace();
+//		}
 	}
 
 }
