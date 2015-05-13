@@ -1,7 +1,7 @@
 /**
  * 
  */
-package chapter01;
+package strategy;
 
 
 /**

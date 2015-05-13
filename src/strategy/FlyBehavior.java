@@ -1,4 +1,4 @@
-package chapter01;
+package strategy;
 
 public interface FlyBehavior {
 	public void fly();
