@@ -30,6 +30,7 @@ public class Waitress {
 					menuCompoent.print();
 				}
 			}catch(UnsupportedOperationException e){}
+			// try catch 的方噶并不好
 		}
 	}
 
