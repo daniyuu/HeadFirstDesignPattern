@@ -3,6 +3,8 @@
  */
 package composite;
 
+import java.util.Iterator;
+
 /**
  * @author daniyuu
  * @see 
@@ -19,7 +21,16 @@ public class Waitress {
 	}
 	
 	public void printMenu(){
-		allMenus.print();
+		Iterator iterator = allMenus.createIterator();
+		System.out.println("\nVEGETARIAN MENU\n---------");
+		while(iterator.hasNext()){
+			MenuComponent menuCompoent = (MenuComponent) iterator.next();
+			try{
+				if(menuCompoent.isVegetarian()){
+					menuCompoent.print();
+				}
+			}catch(UnsupportedOperationException e){}
+		}
 	}
 
 }

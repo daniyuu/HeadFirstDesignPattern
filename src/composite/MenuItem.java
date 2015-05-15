@@ -3,6 +3,8 @@
  */
 package composite;
 
+import java.util.Iterator;
+
 /**
  * @author daniyuu
  * @see 
@@ -53,4 +55,7 @@ public class MenuItem extends MenuComponent {
 		System.out.println("        --- " + getDescription());
 	}
 
+	public Iterator createIterator(){
+		return new NullIterator();
+	}
 }
